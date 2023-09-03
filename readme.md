@@ -5,6 +5,8 @@ The Prime Numbers Generator is a Spring Boot project designed to generate prime 
 
 Given an input number, the service returns a list of prime numbers up to and including that number.
 
+`curl --location 'http://localhost:8080/api/v1/primes/130000?algorithm=sieve' --header 'Accept: application/json'`
+
 ### Sample Input: `10`
 
 ### Sample Output (JSON):
