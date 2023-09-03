@@ -1,0 +1,25 @@
+<config
+        xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+        xmlns='http://www.ehcache.org/v3'
+        xsi:schemaLocation="
+            http://www.ehcache.org/v3
+            http://www.ehcache.org/schema/ehcache-core-3.7.xsd">
+    <persistence directory="spring-boot-ehcache/cache" />
+    <cache-template name="default">
+        <expiry>
+            <ttl unit="seconds">3600</ttl>
+        </expiry>
+        <resources>
+            <heap>2000</heap>
+            <offheap unit="MB">300</offheap>
+            <disk unit="GB">1</disk>
+        </resources>
+    </cache-template>
+
+    <cache alias="primesCache" uses-template="default">
+        <key-type>java.lang.Integer</key-type>
+        <value-type>java.util.List</value-type>
+    </cache>
+</config>
+
+
