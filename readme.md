@@ -51,7 +51,7 @@ The number up to which the prime numbers will be calculated.
 #### algorithm (optional): 
 The algorithm to use for prime number calculation. If not specified, the default algorithm is used.
 
-### Headers:
+### Headers (Required):
 
 Based on the desired output, the request should have one of the following header:
 
